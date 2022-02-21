@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background: hsl(217, 54%, 11%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*,::after,::before, input {
+    box-sizing: border-box;
+}
+
+.main-container {
+    max-width: 320px;
+    background: hsl(216, 50%, 16%);
+    padding: 24px 24px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px 13px rgba(0, 0, 0, 0.185) 
+}
+
+.nft-image {
+    width: 100%;
+    border-radius: 9px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.inner-image-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsla(178, 100%, 50%, 0.527);
+    border-radius: 9px;
+    height: 272px;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+
+.image-container:hover > .inner-image-container {
+    opacity: 1;
+}
+
+.details-container {
+    color: #fff;
+}
+
+.under-details {
+    border-top: 0.5px solid  hsl(215, 32%, 27%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 17px;
+}
+
+.avatar-exp {
+    margin: 0;
+    font-weight: 100;
+    color:  hsl(215, 51%, 70%);
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.avatar-exp b {
+    color: #fff;
+    font-weight: 100;
+}
+
+.avatar-container {
+    background: #fff;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+}
+
+.avatar-container img {
+    width: 100%;
+}
+
+.upper-details {
+    padding-bottom: 16px;
+}
+
+.main-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.main-details {
+    color: hsl(215, 51%, 70%);
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 27px;
+}
+
+.inner-upper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eth-cont {
+    color: hsl(178, 100%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.eth-cont img {
+    margin-right: 8px;
+    margin-top: 3px;
+    width: 11px;
+    height: 18px;
+}
+
+.clock-cont {
+    display: flex;
+    align-items: center;
+    color: hsl(215, 51%, 70%);
+    font-size: 15.5px;
+}
+
+.clock-cont img {
+    margin-right: 5.5px;
+}
+
+.main-title, .avatar-exp b {
+    transition: 0.1s all ease-in-out;
+}
+
+.main-title:hover, .avatar-exp b:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+
+@media screen and (min-width: 700px) {
+    .main-container {
+        max-width: 360px;
+    }
+    .main-details {
+        font-size: 18px;
+        margin-bottom: 21px;
+    }
+    .main-title {
+        font-size: 23.5px;
+    }
+    .inner-image-container {
+        height: 312px;
+    }
+    .upper-details {
+        padding-bottom: 23px;
+    }
+    .under-details {
+        padding-bottom: 7px;
+    }
+}
